@@ -62,6 +62,9 @@ jobs:
         run: |
           export ANDROID_HOME=/usr/local/lib/android/sdk
           fdroid update -c || fdroid update --create-metadata
+          jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/index-v1.jar inled || true
+          jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/index.jar inled || true
+          jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/entry.jar inled || true
 
       - name: Prepare Website and Repository Artifacts
         run: |
