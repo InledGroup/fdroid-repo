@@ -1,0 +1,26 @@
+Categories:
+  - System
+  - Utility
+License: GPL-3.0-or-later
+AuthorName: InledGroup
+AuthorEmail: pulsar@inled.es
+SourceCode: https://github.com/Inled-Pulsar-OS/sayri-android
+IssueTracker: https://github.com/Inled-Pulsar-OS/sayri-android/issues
+Changelog: https://github.com/Inled-Pulsar-OS/sayri-android/releases
+
+Name: Sayri Mobile
+Summary: The AI Operating System Copilot on Android, synchronized with Pulsar OS
+Description: |
+  Sayri Mobile is the Android companion and local orchestrator for Pulsar OS.
+  
+  Features:
+  * Full Android system orchestration & dynamic application discovery
+  * App Functions and App Intents integration (messaging, sharing, media, alarms)
+  * Spatial OCR screen perception and Circle to Search gestures
+  * Local streaming voice dictation powered by Dicio
+  * Dual-device control (manage both your Android smartphone and your Linux PC)
+  * Seamless zero-configuration network pairing with PIN verification
+  * Markdown rendering, clipboard copy, and voice responses
+
+RepoType: git
+Repo: https://github.com/Inled-Pulsar-OS/sayri-android.git

@@ -1,0 +1,7 @@
+repo_name: "Inled Pulsar OS F-Droid Repository"
+repo_icon: "icon.png"
+repo_description: "Official F-Droid repository for Pulsar OS & InledGroup Android applications, featuring Sayri Mobile AI assistant."
+repo_url: "https://inledgroup.github.io/fdroid-repo/repo"
+archive_url: "https://inledgroup.github.io/fdroid-repo/archive"
+keystore: "keystore.p12"
+repo_keyalias: "inled"
