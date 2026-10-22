@@ -1,159 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inled Pulsar OS F-Droid Repository</title>
+  <title>Inled F-Droid · Repositorio Pulsar OS</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="icon.png">
   <style>
     body {
-      background: radial-gradient(circle at 50% 10%, #111827, #030712 90%);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
   </style>
 </head>
-<body class="text-slate-100 min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-white">
+<body class="min-h-screen flex flex-col justify-between items-center px-4 py-8 text-slate-800 selection:bg-sky-500 selection:text-white">
 
-  <!-- Navigation -->
-  <header class="border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-50 bg-slate-950/70">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <img src="icon.png" alt="Inled Logo" class="w-9 h-9 rounded-xl shadow-md border border-cyan-500/30">
-        <div>
-          <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">Inled F-Droid</span>
-          <span class="text-xs text-slate-400 block -mt-1 font-mono">Pulsar OS App Repository</span>
-        </div>
-      </div>
-      <div class="flex items-center space-x-4">
-        <a href="https://github.com/Inled-Pulsar-OS/sayri-android" target="_blank" class="text-xs text-slate-300 hover:text-white transition flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
-      </div>
+  <!-- Top Inled Brand Logo -->
+  <div class="w-full max-w-md flex flex-col items-center pt-4 pb-6">
+    <div class="flex items-center tracking-tight font-extrabold text-3xl select-none" style="color: #2bb3ff;">
+      <span class="relative inline-block">
+        <span class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-[#ef4444] rounded-sm"></span>
+        I
+      </span>NLED
     </div>
-  </header>
+  </div>
 
-  <!-- Hero Section -->
-  <main class="max-w-5xl mx-auto px-6 py-12 flex-1 w-full">
-    <div class="text-center max-w-2xl mx-auto mb-14">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-300 text-xs font-medium mb-4">
-        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-        Official InledGroup & Pulsar OS Repository
-      </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-        Android Apps for <span class="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Pulsar OS</span>
-      </h1>
-      <p class="text-slate-400 text-sm md:text-base leading-relaxed">
-        Add this F-Droid repository to automatically receive updates, install Sayri Mobile, and synchronize your Android smartphone with Pulsar OS.
-      </p>
+  <!-- Main Clean Card -->
+  <main class="w-full max-w-md bg-white border border-slate-200/90 rounded-2xl p-7 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+    
+    <div class="text-center mb-6">
+      <h1 class="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">Repositorio F-Droid</h1>
+      <p class="text-xs md:text-sm text-slate-500 mt-1">Aplicaciones oficiales de Pulsar OS para tu smartphone.</p>
     </div>
 
-    <!-- Repository Card & Quick Add -->
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch mb-16">
-      
-      <!-- Left: QR Code & Add Buttons -->
-      <div class="md:col-span-5 bg-slate-900/70 border border-slate-800 rounded-2xl p-6 flex flex-col items-center justify-between text-center shadow-xl backdrop-blur-sm">
-        <div>
-          <h2 class="text-lg font-bold mb-1 text-slate-100">Scan to Add Repository</h2>
-          <p class="text-xs text-slate-400 mb-5">Open F-Droid, Neo Store, or Droid-ify and scan this QR code:</p>
-          <div class="bg-white p-3 rounded-2xl shadow-inner inline-block mb-5">
-            <img id="qrCodeImg" class="w-48 h-48 rounded-lg" alt="F-Droid Repository QR Code" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://inledgroup.github.io/fdroid-repo/repo">
-          </div>
-        </div>
-
-        <div class="w-full space-y-2.5">
-          <a id="btnFdroidScheme" href="fdroidrepos://inledgroup.github.io/fdroid-repo/repo" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-slate-950 font-bold text-sm py-2.5 px-4 rounded-xl transition shadow-lg shadow-cyan-500/20">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-            Add to F-Droid / Droid-ify
-          </a>
-          <button onclick="copyRepoUrl()" class="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs py-2 px-4 rounded-xl border border-slate-700 transition">
-            <span id="copyBtnText">Copy Repository URL</span>
-          </button>
-        </div>
+    <!-- Repository URL input -->
+    <div class="mb-5">
+      <label for="repoInput" class="block text-[11px] font-bold text-slate-500 tracking-wider uppercase mb-1.5">
+        URL DEL REPOSITORIO
+      </label>
+      <div class="flex items-center justify-between border border-slate-300 rounded-xl px-3.5 py-2.5 bg-white shadow-sm focus-within:border-slate-800 transition">
+        <input 
+          type="text" 
+          id="repoInput" 
+          readonly 
+          value="https://fdroid.inled.es/repo" 
+          class="w-full text-xs font-mono text-slate-800 bg-transparent outline-none select-all"
+        >
+        <button 
+          id="btnCopy" 
+          onclick="copyRepoUrl()" 
+          class="ml-2 text-xs font-semibold text-slate-700 hover:text-slate-900 px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 border border-slate-200 transition shrink-0"
+        >
+          Copiar
+        </button>
       </div>
-
-      <!-- Right: Sayri Mobile Showcase -->
-      <div class="md:col-span-7 bg-slate-900/70 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between shadow-xl backdrop-blur-sm">
-        <div>
-          <div class="flex items-start justify-between mb-4">
-            <div class="flex items-center space-x-4">
-              <img src="icon.png" alt="Sayri Mobile" class="w-16 h-16 rounded-2xl shadow-md border border-cyan-500/30">
-              <div>
-                <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                  Sayri Mobile
-                  <span class="text-xs font-mono font-medium bg-cyan-950 text-cyan-300 border border-cyan-800 px-2 py-0.5 rounded-full">v0.1.1</span>
-                </h3>
-                <p class="text-xs text-slate-400">The AI Operating System Copilot on Android</p>
-                <div class="flex gap-2 mt-2">
-                  <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">System</span>
-                  <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">AI Assistant</span>
-                  <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-teal-950 text-teal-300">GPL-3.0</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-xs text-slate-300 space-y-2 mb-6">
-            <p>Sayri Mobile is the official companion assistant for Pulsar OS, connecting your phone directly to your desktop or running independently:</p>
-            <ul class="space-y-1 text-slate-400 pl-4 list-disc">
-              <li><strong class="text-slate-200">System Orchestration:</strong> Dynamic discovery of all installed apps and deep App Functions/Intents integration.</li>
-              <li><strong class="text-slate-200">Spatial Perception & OCR:</strong> Circle to Search and screen layout analysis with exact pixel coordinates.</li>
-              <li><strong class="text-slate-200">Voice Dictation:</strong> Word-by-word streaming offline recognition powered by Dicio.</li>
-              <li><strong class="text-slate-200">Dual Device Control:</strong> Seamlessly trigger actions on your smartphone or send commands to Pulsar OS on PC.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
-          <div class="text-xs text-slate-400">
-            <span>Package: <code class="text-cyan-400 font-mono">es.inled.sayri</code></span>
-          </div>
-          <a href="https://github.com/Inled-Pulsar-OS/sayri-android/releases/latest" target="_blank" class="inline-flex items-center gap-2 bg-cyan-600/30 hover:bg-cyan-600/50 text-cyan-300 text-xs font-semibold py-2 px-3.5 rounded-xl border border-cyan-500/40 transition">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            Download Latest APK
-          </a>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Instructions Accordion -->
-    <div class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-6">
-      <h3 class="text-base font-bold text-white mb-3">How to add manually:</h3>
-      <ol class="text-xs text-slate-400 space-y-2 list-decimal pl-4">
-        <li>Open your F-Droid client (<strong>F-Droid</strong>, <strong>Droid-ify</strong>, or <strong>Neo Store</strong>).</li>
-        <li>Go to <strong>Settings</strong> &rarr; <strong>Repositories</strong> &rarr; <strong>Add Repository</strong> (+).</li>
-        <li>Paste the repository URL: <code id="repoUrlCode" class="text-cyan-400 font-mono bg-slate-800 px-1.5 py-0.5 rounded select-all">https://inledgroup.github.io/fdroid-repo/repo</code></li>
-        <li>Tap <strong>Add</strong> and refresh repositories. Sayri Mobile will now appear ready to install!</li>
-      </ol>
+    <!-- QR Code Container -->
+    <div class="flex flex-col items-center justify-center p-4 border border-slate-200 rounded-xl bg-slate-50/60 mb-5">
+      <div class="bg-white p-2 rounded-lg border border-slate-200/80 shadow-sm">
+        <img 
+          id="qrCodeImg" 
+          src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://fdroid.inled.es/repo" 
+          alt="QR Code Repositorio F-Droid" 
+          class="w-36 h-36 rounded"
+        >
+      </div>
+      <span class="text-[11px] text-slate-500 mt-2.5 font-medium">Escanea con F-Droid, Droid-ify o Neo Store</span>
     </div>
+
+    <!-- Actions -->
+    <div class="space-y-2.5">
+      <!-- Primary Dark Inled Button -->
+      <a 
+        id="btnFdroid" 
+        href="fdroidrepos://fdroid.inled.es/repo" 
+        class="w-full bg-[#0f172a] hover:bg-[#1e293b] text-white font-medium text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm transition"
+      >
+        <span>Añadir a F-Droid</span>
+        <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <!-- Secondary Direct APK Download -->
+      <a 
+        href="https://github.com/Inled-Pulsar-OS/sayri-android/releases/latest" 
+        target="_blank" 
+        class="w-full bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs py-2.5 px-4 rounded-xl border border-slate-300 flex items-center justify-center gap-1.5 transition"
+      >
+        <svg class="w-4 h-4 text-slate-500 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        <span>Descargar Sayri Mobile APK</span>
+      </a>
+    </div>
+
+    <!-- Included App Item -->
+    <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3">
+      <img src="icon.png" alt="Sayri" class="w-10 h-10 rounded-xl border border-slate-200 shadow-sm shrink-0">
+      <div class="text-left flex-1 min-w-0">
+        <div class="flex items-center gap-1.5">
+          <span class="font-bold text-xs text-slate-900 truncate">Sayri Mobile</span>
+          <span class="text-[10px] font-mono text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200">v0.1.1</span>
+        </div>
+        <p class="text-[11px] text-slate-500 truncate">Copiloto IA integrado en Android y Pulsar OS</p>
+      </div>
+    </div>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-900 py-6 text-center text-xs text-slate-500">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
-      <span>&copy; InledGroup & Pulsar OS. Open Source & Privacy First.</span>
-      <div class="flex space-x-4">
-        <a href="https://github.com/InledGroup" class="hover:text-slate-400">InledGroup</a>
-        <a href="https://github.com/Inled-Pulsar-OS" class="hover:text-slate-400">Pulsar OS</a>
-      </div>
-    </div>
+  <!-- Clean Footer -->
+  <footer class="w-full max-w-md text-center py-6">
+    <p class="text-xs text-slate-400 font-medium">
+      Licenciado bajo MIT-INLED
+    </p>
   </footer>
 
   <script>
-    const repoUrl = window.location.origin + window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') + '/repo';
-    const cleanRepoUrl = repoUrl.startsWith('http') ? repoUrl : 'https://inledgroup.github.io/fdroid-repo/repo';
-    
-    document.getElementById('repoUrlCode').innerText = cleanRepoUrl;
-    document.getElementById('btnFdroidScheme').href = 'fdroidrepos://' + cleanRepoUrl.replace(/^https?:\/\//, '');
-    document.getElementById('qrCodeImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=' + encodeURIComponent(cleanRepoUrl);
+    const repoUrl = "https://fdroid.inled.es/repo";
 
     function copyRepoUrl() {
-      navigator.clipboard.writeText(cleanRepoUrl).then(() => {
-        const btn = document.getElementById('copyBtnText');
-        btn.innerText = 'Copied to Clipboard!';
-        setTimeout(() => { btn.innerText = 'Copy Repository URL'; }, 2000);
+      navigator.clipboard.writeText(repoUrl).then(() => {
+        const btn = document.getElementById("btnCopy");
+        btn.innerText = "¡Copiado!";
+        btn.classList.add("text-emerald-700", "bg-emerald-50", "border-emerald-200");
+        setTimeout(() => {
+          btn.innerText = "Copiar";
+          btn.classList.remove("text-emerald-700", "bg-emerald-50", "border-emerald-200");
+        }, 2000);
       });
     }
   </script>
