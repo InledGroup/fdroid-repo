@@ -1,0 +1,26 @@
+Categories:
+  - System
+  - Utility
+  - Connectivity
+License: GPL-3.0-or-later
+AuthorName: InledGroup
+AuthorEmail: pulsar@inled.es
+SourceCode: https://github.com/Inled-Pulsar-OS/pulsar-phone
+IssueTracker: https://github.com/Inled-Pulsar-OS/pulsar-phone/issues
+Changelog: https://github.com/Inled-Pulsar-OS/pulsar-phone/releases
+
+Name: Pulsar Phone
+Summary: Seamless mobile and desktop integration and screen mirroring for Pulsar OS
+Description: |
+  Pulsar Phone connects your Android smartphone with Pulsar OS on your Linux PC.
+
+  Features:
+  * High-speed wireless screen mirroring with ultra-low latency
+  * Synchronized stereo audio streaming between PC and phone
+  * Remote multi-display desktop view and touch controls
+  * Isolated Android application windowing on your PC desktop
+  * Automatic zero-configuration network discovery via UDP beacons
+  * Bidirectional notification sync and remote control
+
+RepoType: git
+Repo: https://github.com/Inled-Pulsar-OS/pulsar-phone.git
