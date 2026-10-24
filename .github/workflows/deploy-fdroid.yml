@@ -61,7 +61,52 @@ jobs:
       - name: Build F-Droid Repository Index
         run: |
           export ANDROID_HOME=/usr/local/lib/android/sdk
-          fdroid update -c || fdroid update --create-metadata
+          fdroid update || fdroid update --create-metadata
+
+          python3 - << 'EOF'
+          import json, os, shutil, zipfile
+
+          # 1. Ensure hash-named icons exist for V2
+          if os.path.exists("repo/index-v2.json"):
+              with open("repo/index-v2.json", "r") as f:
+                  v2 = json.load(f)
+              for pkg, data in v2.get("packages", {}).items():
+                  icon_info = data.get("metadata", {}).get("icon", {}).get("en-US", {})
+                  icon_name = icon_info.get("name")
+                  if icon_name:
+                      target_path = os.path.join("repo", icon_name.lstrip("/"))
+                      if not os.path.exists(target_path):
+                          src_path = os.path.join(os.path.dirname(target_path), "icon.png")
+                          if os.path.exists(src_path):
+                              shutil.copyfile(src_path, target_path)
+                              print(f"Restored V2 icon: {target_path}")
+
+          # 2. Ensure V1 icons are set in index-v1.json and index-v1.jar
+          if os.path.exists("repo/index-v1.json"):
+              with open("repo/index-v1.json", "r") as f:
+                  v1 = json.load(f)
+              modified = False
+              for app in v1.get("apps", []):
+                  pkg = app.get("packageName")
+                  if not app.get("icon"):
+                      icon_file = f"{pkg}.png"
+                      target_icon = os.path.join("repo/icons", icon_file)
+                      src_meta = f"metadata/{pkg}/en-US/images/icon.png"
+                      if not os.path.exists(target_icon) and os.path.exists(src_meta):
+                          os.makedirs("repo/icons", exist_ok=True)
+                          shutil.copyfile(src_meta, target_icon)
+                      if os.path.exists(target_icon):
+                          app["icon"] = icon_file
+                          modified = True
+                          print(f"Set V1 icon for {pkg}: {icon_file}")
+              if modified:
+                  with open("repo/index-v1.json", "w") as f:
+                      json.dump(v1, f, indent=2)
+                  if os.path.exists("repo/index-v1.jar"):
+                      with zipfile.ZipFile("repo/index-v1.jar", "w") as z:
+                          z.write("repo/index-v1.json", "index-v1.json")
+          EOF
+
           jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/index-v1.jar inled || true
           jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/index.jar inled || true
           jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/entry.jar inled || true
