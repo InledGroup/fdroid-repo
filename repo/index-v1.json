@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1793093002000,
+    "timestamp": 1793133563000,
     "version": 20002,
     "name": "Inled F-Droid",
     "icon": "icon.png",
@@ -69,7 +69,7 @@
       {
         "added": 1792745562000,
         "apkName": "pulsar-phone.apk",
-        "hash": "6fb54352754265c0bff91fb48534f96498df7417f08b4fd966166b821727dedb",
+        "hash": "682635733c5efcecc3c2166321a82ce4cc9894f922ae61a28e79a65e9d8cd231",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [
@@ -79,9 +79,9 @@
           "x86_64"
         ],
         "packageName": "es.inled.pulsarphone",
-        "sig": "fbd32e8b45bccc562a7d42966471e224",
-        "signer": "c1a6700616c04a8626e0843c5aea1263e635e63e636895708c7b8f989ec19c47",
-        "size": 18341242,
+        "sig": "6d9d046837d569e0659a18cf509c6b84",
+        "signer": "6776b67fe214f37cf16b3bd5f06cfdc04e4297ea434905809c1179ab82018970",
+        "size": 18341366,
         "targetSdkVersion": 34,
         "uses-permission": [
           [
@@ -102,6 +102,22 @@
           ],
           [
             "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
             null
           ],
           [
