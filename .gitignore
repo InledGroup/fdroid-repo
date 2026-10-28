@@ -1,0 +1,22 @@
+# Keystores and private signing keys
+*.p12
+*.jks
+*.keystore
+keystore.p12
+*.idsig
+
+# Local credentials and secret files
+*.secret*
+*secret*
+.env
+.env.*
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# Backups and temporary files
+*.bak
+*.old*
+tmp/

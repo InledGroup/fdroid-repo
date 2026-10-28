@@ -42,6 +42,23 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends aapt apksigner zipalign fdroidserver || pip install fdroidserver
 
+      - name: Restore Keystore & Inject Secrets
+        env:
+          KEYSTORE_BASE64: ${{ secrets.FDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASS: ${{ secrets.FDROID_KEYSTORE_PASS }}
+          KEY_PASS: ${{ secrets.FDROID_KEY_PASS }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > keystore.p12
+            chmod 600 keystore.p12
+            sed -i "s|^keystorepass:.*|keystorepass: \"$KEYSTORE_PASS\"|" config.yml
+            sed -i "s|^keypass:.*|keypass: \"$KEY_PASS\"|" config.yml
+            chmod 600 config.yml
+          else
+            echo "::error::FDROID_KEYSTORE_BASE64 secret not found! Please configure repository secrets."
+            exit 1
+          fi
+
       - name: Fetch Latest Sayri Mobile APK from GitHub Releases
         run: |
           mkdir -p repo/icons
@@ -56,6 +73,9 @@ jobs:
           if [ -n "$APK_URL" ]; then
             echo "Downloading latest online APK: $APK_URL"
             curl -sSL -o "repo/sayri-mobile-release.apk" "$APK_URL"
+            apksigner sign --ks keystore.p12 --ks-pass "pass:${{ secrets.FDROID_KEYSTORE_PASS }}" \
+              --ks-key-alias inled --key-pass "pass:${{ secrets.FDROID_KEY_PASS }}" \
+              --v1-signing-enabled true --v2-signing-enabled true repo/sayri-mobile-release.apk || true
           fi
 
       - name: Build F-Droid Repository Index
@@ -107,9 +127,9 @@ jobs:
                           z.write("repo/index-v1.json", "index-v1.json")
           EOF
 
-          jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/index-v1.jar inled || true
-          jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/index.jar inled || true
-          jarsigner -keystore keystore.p12 -storepass inledfdroid -digestalg SHA-256 -sigalg SHA256withRSA repo/entry.jar inled || true
+          jarsigner -keystore keystore.p12 -storepass "${{ secrets.FDROID_KEYSTORE_PASS }}" -digestalg SHA-256 -sigalg SHA256withRSA repo/index-v1.jar inled || true
+          jarsigner -keystore keystore.p12 -storepass "${{ secrets.FDROID_KEYSTORE_PASS }}" -digestalg SHA-256 -sigalg SHA256withRSA repo/index.jar inled || true
+          jarsigner -keystore keystore.p12 -storepass "${{ secrets.FDROID_KEYSTORE_PASS }}" -digestalg SHA-256 -sigalg SHA256withRSA repo/entry.jar inled || true
 
       - name: Prepare Website and Repository Artifacts
         run: |
@@ -118,6 +138,11 @@ jobs:
           cp icon.png dist/ 2>/dev/null || true
           cp inled_logo.png dist/ 2>/dev/null || true
           cp -r repo dist/
+
+      - name: Clean Keystore and Local Secrets
+        run: |
+          rm -f keystore.p12
+          git checkout config.yml
 
       - name: Commit Updated Index to Repository
         run: |
