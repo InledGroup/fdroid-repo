@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1793201914000,
+    "timestamp": 1793202025000,
     "version": 20002,
     "name": "Inled F-Droid",
     "icon": "icon.png",
@@ -133,13 +133,13 @@
       {
         "added": 1792677185000,
         "apkName": "sayri-mobile-release.apk",
-        "hash": "449bc86286dfa5bbd2e1ca53eba0789a3409b4f1389edadf829067044e914e55",
+        "hash": "7bfac18463016478e4e9e870c105d936beec3087221c6cc4f7cd18cab560b216",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "packageName": "es.inled.sayri",
         "sig": "61aa6075ce81121aade7336f4350d10d",
         "signer": "dc3cffc5a186a212e3d3a5f1ff4a0d6e05723a712811eda1e8a0280c19a5b732",
-        "size": 6394435,
+        "size": 6398531,
         "targetSdkVersion": 34,
         "uses-permission": [
           [
