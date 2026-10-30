@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1793390455000,
+    "timestamp": 1793392030000,
     "version": 20002,
     "name": "Inled F-Droid",
     "icon": "icon.png",
@@ -69,7 +69,7 @@
       {
         "added": 1792745562000,
         "apkName": "pulsar-phone.apk",
-        "hash": "a2aff41d5147397cd9c62c3495331e205875598224a1b8098518e9d2d6330c8b",
+        "hash": "4e96bca4966f3a5d5326aea302f5e61b5e497e8e759652f932b4dd1fcf23ba6e",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [
@@ -79,9 +79,9 @@
           "x86_64"
         ],
         "packageName": "es.inled.pulsarphone",
-        "sig": "fd87477dc2d7bd7bdb1e0b4b4309ca2a",
-        "signer": "ce55743ea12703a1ebf602bed6f98f7827d349538b4c82f43dd03bf157e0f9bc",
-        "size": 18381061,
+        "sig": "4eb27eb273c049b2c27c0293fb940809",
+        "signer": "48d5ca121e952668b0ec84178fcead7c1c43ab6d6c8cf3a1e9289b031388b1c9",
+        "size": 21337658,
         "targetSdkVersion": 34,
         "uses-permission": [
           [
