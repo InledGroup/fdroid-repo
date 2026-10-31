@@ -1,0 +1,191 @@
+{
+  "repo": {
+    "timestamp": 1793440780000,
+    "version": 20002,
+    "name": "Inled F-Droid",
+    "icon": "icon.png",
+    "address": "https://fdroid.inled.es/repo",
+    "description": "Official Android application repository by InledGroup."
+  },
+  "requests": {
+    "install": [],
+    "uninstall": []
+  },
+  "apps": [
+    {
+      "authorEmail": "pulsar@inled.es",
+      "authorName": "InledGroup",
+      "categories": [
+        "System",
+        "Utility",
+        "Connectivity"
+      ],
+      "changelog": "https://github.com/Inled-Pulsar-OS/pulsar-phone/releases",
+      "suggestedVersionCode": "1",
+      "description": "Pulsar Phone connects your Android smartphone with Pulsar OS on your Linux PC.\n\nFeatures:\n* High-speed wireless screen mirroring with ultra-low latency\n* Synchronized stereo audio streaming between PC and phone\n* Remote multi-display desktop view and touch controls\n* Isolated Android application windowing on your PC desktop\n* Automatic zero-configuration network discovery via UDP beacons\n* Bidirectional notification sync and remote control\n",
+      "issueTracker": "https://github.com/Inled-Pulsar-OS/pulsar-phone/issues",
+      "license": "GPL-3.0-or-later",
+      "name": "Pulsar Phone",
+      "sourceCode": "https://github.com/Inled-Pulsar-OS/pulsar-phone",
+      "summary": "Seamless mobile and desktop integration and screen mirroring for Pulsar OS",
+      "added": 1792745562000,
+      "icon": "es.inled.pulsarphone.1.png",
+      "packageName": "es.inled.pulsarphone",
+      "lastUpdated": 1792745562000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_RFgZsQ6sq9gfn_m58M1Kodh8szp3IAD8JtWjstWZFrI=.png"
+        }
+      }
+    },
+    {
+      "authorEmail": "pulsar@inled.es",
+      "authorName": "InledGroup",
+      "categories": [
+        "System",
+        "Utility"
+      ],
+      "changelog": "https://github.com/Inled-Pulsar-OS/sayri-android/releases",
+      "suggestedVersionCode": "2",
+      "description": "Sayri Mobile is the Android companion and local orchestrator for Pulsar OS.\n\nFeatures:\n* Full Android system orchestration & dynamic application discovery\n* App Functions and App Intents integration (messaging, sharing, media, alarms)\n* Spatial OCR screen perception and Circle to Search gestures\n* Local streaming voice dictation powered by Dicio\n* Dual-device control (manage both your Android smartphone and your Linux PC)\n* Seamless zero-configuration network pairing with PIN verification\n* Markdown rendering, clipboard copy, and voice responses\n",
+      "issueTracker": "https://github.com/Inled-Pulsar-OS/sayri-android/issues",
+      "license": "GPL-3.0-or-later",
+      "name": "Sayri Mobile",
+      "sourceCode": "https://github.com/Inled-Pulsar-OS/sayri-android",
+      "summary": "The AI Operating System Copilot on Android, synchronized with Pulsar OS",
+      "added": 1792677185000,
+      "packageName": "es.inled.sayri",
+      "lastUpdated": 1792677185000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_KpTH1h4qnu1nA-mB9nCgajUDNoR8wKtL0PU7sRRLPHk=.png"
+        }
+      },
+      "icon": "es.inled.sayri.png"
+    }
+  ],
+  "packages": {
+    "es.inled.pulsarphone": [
+      {
+        "added": 1792745562000,
+        "apkName": "pulsar-phone.apk",
+        "hash": "db0a14a1a077422246fd64281ba9dbebe4156cd1d3619a1e9a66e1682fb4f61b",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "es.inled.pulsarphone",
+        "sig": "cda7cde90433fcb9d82e2d8687f38ee3",
+        "signer": "04108356f801342fd4a8d85c853e1d95ccda6c428a588e84a77a4e5538b9a78d",
+        "size": 21360785,
+        "targetSdkVersion": 34,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "es.inled.pulsarphone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 1,
+        "versionName": "1.0.0"
+      }
+    ],
+    "es.inled.sayri": [
+      {
+        "added": 1792677185000,
+        "apkName": "sayri-mobile-release.apk",
+        "hash": "3b9eb49ad05cef84788e974bfccd15c456a5ddf008ea5c081810b1b99c94b8f3",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "packageName": "es.inled.sayri",
+        "sig": "61aa6075ce81121aade7336f4350d10d",
+        "signer": "dc3cffc5a186a212e3d3a5f1ff4a0d6e05723a712811eda1e8a0280c19a5b732",
+        "size": 6398531,
+        "targetSdkVersion": 34,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WRITE_SECURE_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "es.inled.sayri.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 2,
+        "versionName": "0.1.2"
+      }
+    ]
+  }
+}
