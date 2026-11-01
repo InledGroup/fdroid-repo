@@ -158,8 +158,20 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "Deploying to Cloudflare Pages..."
-            npx wrangler pages deploy dist --project-name=inled-fdroid
+            echo "Checking existing Cloudflare Pages projects..."
+            npx wrangler pages project list || true
+
+            PROJECT_NAME=$(npx wrangler pages project list 2>&1 | grep -oE '(inled-[a-z0-9_-]+|fdroid[a-z0-9_-]*)' | head -n 1 || true)
+            if [ -z "$PROJECT_NAME" ]; then
+              PROJECT_NAME="inled-fdroid"
+              echo "Creating project $PROJECT_NAME..."
+              npx wrangler pages project create "$PROJECT_NAME" --production-branch main || true
+            else
+              echo "Found existing Pages project: $PROJECT_NAME"
+            fi
+
+            echo "Deploying to Cloudflare Pages ($PROJECT_NAME)..."
+            npx wrangler pages deploy dist --project-name="$PROJECT_NAME"
           else
             echo "Cloudflare credentials not set, skipping Cloudflare Pages deploy."
           fi
