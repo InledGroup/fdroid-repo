@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1794048240000,
+    "timestamp": 1794071818000,
     "version": 20002,
     "name": "Inled F-Droid",
     "icon": "icon.png",
@@ -21,7 +21,7 @@
         "Connectivity"
       ],
       "changelog": "https://github.com/Inled-Pulsar-OS/pulsar-phone/releases",
-      "suggestedVersionCode": "3",
+      "suggestedVersionCode": "4",
       "description": "Pulsar Phone connects your Android smartphone with Pulsar OS on your Linux PC.\n\nFeatures:\n* High-speed wireless screen mirroring with ultra-low latency\n* Synchronized stereo audio streaming between PC and phone\n* Remote multi-display desktop view and touch controls\n* Isolated Android application windowing on your PC desktop\n* Automatic zero-configuration network discovery via UDP beacons\n* Bidirectional notification sync and remote control\n",
       "issueTracker": "https://github.com/Inled-Pulsar-OS/pulsar-phone/issues",
       "license": "GPL-3.0-or-later",
@@ -29,7 +29,7 @@
       "sourceCode": "https://github.com/Inled-Pulsar-OS/pulsar-phone",
       "summary": "Seamless mobile and desktop integration and screen mirroring for Pulsar OS",
       "added": 1792745562000,
-      "icon": "es.inled.pulsarphone.3.png",
+      "icon": "es.inled.pulsarphone.4.png",
       "packageName": "es.inled.pulsarphone",
       "lastUpdated": 1792745562000,
       "localized": {
@@ -69,7 +69,7 @@
       {
         "added": 1792745562000,
         "apkName": "pulsar-phone.apk",
-        "hash": "e15ea28ce899ae3f5e92fece8337b6e3b07320581444e1dc575a1a34b791d880",
+        "hash": "e1b6a40f44c3b7ca5f74fabbb18ea199a9cf571d25e68bd9c588ce335063d832",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [
@@ -79,9 +79,9 @@
           "x86_64"
         ],
         "packageName": "es.inled.pulsarphone",
-        "sig": "ad699711817c98fa39b683add44a59ac",
-        "signer": "60e425ed87e2bb553953293407a6e8ce7f5135c9b8dc7796f764cab7545515e8",
-        "size": 21362323,
+        "sig": "48f0de9a95811bc5496dccf2a2c4cb97",
+        "signer": "2a0793dd5f9a7db4d79c0150278194b74f7c8cd2a3237b516db19467cb9d810a",
+        "size": 21364115,
         "targetSdkVersion": 34,
         "uses-permission": [
           [
@@ -137,8 +137,8 @@
             null
           ]
         ],
-        "versionCode": 3,
-        "versionName": "1.0.2"
+        "versionCode": 4,
+        "versionName": "1.0.3"
       }
     ],
     "es.inled.sayri": [
